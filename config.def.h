@@ -69,5 +69,11 @@ static const struct arg args[] = {
   { run_command, "^c#a3be8c^|🔊%4s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
   /* { battery_perc, "%3s%%  ", "BAT0" }, */
   { datetime, "%s", "^c#e7cb93^|%a, %b %d|"},
-  { datetime, "%s", "^c#c68a75^|🕟 %I:%M %p|   "},
+  { datetime, "%s", "^c#c68a75^|🕟 %I:%M %p|"},
+  /*  */
+  /* { kernel_release, "| %s|", "NULL"}, */
+  /* { run_command, "|🔊%4s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
+  /* { battery_perc, "%3s%%  ", "BAT0" }, */
+  /* { datetime, "%s", "|%a, %b %d|"}, */
+  /* { datetime, "%s", "|🕟 %I:%M %p|"}, */
 };
