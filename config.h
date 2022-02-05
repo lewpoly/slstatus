@@ -65,15 +65,36 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-  { kernel_release, "^c#88c0d0^| %s|", "NULL"},
-  { run_command, "^c#a3be8c^|🔊%4s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+
+  /* pc with emojis and color*/
+  /* { kernel_release, "^c#88c0d0^| %s|", "NULL"}, */
+  /* { run_command, "^c#a3be8c^|🔊%4s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
+  /* { datetime, "%s", "^c#e7cb93^|🗓 %a, %b %d|"}, */
+  /* { datetime, "%s", "^c#c68a75^|🕔 %I:%M %p|"}, */
+
+  /* bland but clean */
+  { separator, "^c#88c0d0^  ", "NULL" },
+  { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { cpu_perc, "^c#d08770^ %s%% ", "NULL"},
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { ram_perc, "^c#d08770^ %s%% ", "NULL"},
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { kernel_release, "^c#d08770^%s ", "NULL"},
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { run_command, "^c#d08770^%4s", "sb-pacupdate" },
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^^c#ffffff^%I:%M%p^c#bbbbbb^"},
+
+  /* laptop */
+  /* { kernel_release, "^c#88c0d0^| %s|", "NULL"}, */
+  /* { run_command, "^c#a3be8c^|🔊%4s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
   /* { battery_perc, "%3s%%  ", "BAT0" }, */
-  { datetime, "%s", "^c#e7cb93^|%a, %b %d|"},
-  { datetime, "%s", "^c#c68a75^|🕟 %I:%M %p|"},
-  /*  */
-  /* { kernel_release, "| %s|", "NULL"}, */
-  /* { run_command, "|🔊%4s|", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
-  /* { battery_perc, "%3s%%  ", "BAT0" }, */
-  /* { datetime, "%s", "|%a, %b %d|"}, */
-  /* { datetime, "%s", "|🕟 %I:%M %p|"}, */
+  /* { datetime, "%s", "^c#e7cb93^|🗓 %a, %b %d|"}, */
+  /* { datetime, "%s", "^c#c68a75^|🕔 %I:%M %p|"}, */
 };
