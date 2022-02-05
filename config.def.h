@@ -95,8 +95,8 @@ static const struct arg args[] = {
   /* { separator, "^c#88c0d0^  ", "NULL" }, */
   /* { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
   /* { separator, "^c#bbbbbb^ ", "NULL" }, */
-  /* { separator, "^c#88c0d0^ ", "NULL" }, */
-  /* { battery_perc, "%3s%% ", "BAT0" }, */
+  /* { separator, "^c#88c0d0^  ", "NULL" }, */
+  /* { battery_perc, "^c#d08770^%3s%% ", "BAT0" }, */
   /* { battery_remaining, "%s ", "BAT0" }, */
   /* { separator, "^c#bbbbbb^ ", "NULL" }, */
   /* { separator, "^c#88c0d0^ ", "NULL" }, */
