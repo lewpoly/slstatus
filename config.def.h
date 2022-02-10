@@ -89,7 +89,7 @@ static const struct arg args[] = {
   { run_command, "^c#d08770^%4s", "sb-pacupdate" },
   { separator, "^c#bbbbbb^ ", "NULL" },
   { separator, "^c#88c0d0^ ", "NULL" },
-  { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^^c#ffffff^%I:%M%p^c#bbbbbb^"},
+  { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^ ^c#88c0d0^ ^c#d08770^%I:%M%p "},
 
   /* laptop clean */
   /* { separator, "^c#88c0d0^  ", "NULL" }, */
@@ -112,7 +112,7 @@ static const struct arg args[] = {
   /* { run_command, "^c#d08770^%4s", "sb-pacupdate" }, */
   /* { separator, "^c#bbbbbb^ ", "NULL" }, */
   /* { separator, "^c#88c0d0^ ", "NULL" }, */
-  /* { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^^c#ffffff^%I:%M%p^c#bbbbbb^"}, */
+  /* { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^ ^c#88c0d0^ ^c#d08770^%I:%M%p"}, */
 
   /* laptop with emoji*/
   /* { kernel_release, "^c#88c0d0^| %s|", "NULL"}, */

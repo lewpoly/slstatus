@@ -73,8 +73,31 @@ static const struct arg args[] = {
   /* { datetime, "%s", "^c#c68a75^|🕔 %I:%M %p|"}, */
 
   /* clean */
+  { separator, "^c#88c0d0^  ", "NULL" },
+  { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { cpu_perc, "^c#d08770^ %s%% ", "NULL"},
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { ram_perc, "^c#d08770^ %s%% ", "NULL"},
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { kernel_release, "^c#d08770^%s ", "NULL"},
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { run_command, "^c#d08770^%4s", "sb-pacupdate" },
+  { separator, "^c#bbbbbb^ ", "NULL" },
+  { separator, "^c#88c0d0^ ", "NULL" },
+  { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^ ^c#88c0d0^ ^c#d08770^%I:%M%p "},
+
+  /* laptop clean */
   /* { separator, "^c#88c0d0^  ", "NULL" }, */
   /* { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
+  /* { separator, "^c#bbbbbb^ ", "NULL" }, */
+  /* { separator, "^c#88c0d0^  ", "NULL" }, */
+  /* { battery_perc, "^c#d08770^%3s%% ", "BAT0" }, */
+  /* { battery_remaining, "%s ", "BAT0" }, */
   /* { separator, "^c#bbbbbb^ ", "NULL" }, */
   /* { separator, "^c#88c0d0^ ", "NULL" }, */
   /* { cpu_perc, "^c#d08770^ %s%% ", "NULL"}, */
@@ -90,29 +113,6 @@ static const struct arg args[] = {
   /* { separator, "^c#bbbbbb^ ", "NULL" }, */
   /* { separator, "^c#88c0d0^ ", "NULL" }, */
   /* { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^^c#ffffff^%I:%M%p^c#bbbbbb^"}, */
-
-  /* laptop clean */
-  { separator, "^c#88c0d0^  ", "NULL" },
-  { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^  ", "NULL" },
-  { battery_perc, "^c#d08770^%3s%% ", "BAT0" },
-  { battery_remaining, "%s ", "BAT0" },
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { cpu_perc, "^c#d08770^ %s%% ", "NULL"},
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { ram_perc, "^c#d08770^ %s%% ", "NULL"},
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { kernel_release, "^c#d08770^%s ", "NULL"},
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { run_command, "^c#d08770^%4s", "sb-pacupdate" },
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^^c#ffffff^%I:%M%p^c#bbbbbb^"},
 
   /* laptop with emoji*/
   /* { kernel_release, "^c#88c0d0^| %s|", "NULL"}, */
