@@ -73,23 +73,43 @@ static const struct arg args[] = {
   /* { datetime, "%s", "^c#c68a75^|🕔 %I:%M %p|"}, */
 
   /* clean */
-  { separator, "^c#88c0d0^  ", "NULL" },
-  { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { cpu_perc, "^c#d08770^ %s%% ", "NULL"},
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { ram_perc, "^c#d08770^ %s%% ", "NULL"},
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { kernel_release, "^c#d08770^%s ", "NULL"},
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { run_command, "^c#d08770^%4s", "sb-pacupdate" },
-  { separator, "^c#bbbbbb^ ", "NULL" },
-  { separator, "^c#88c0d0^ ", "NULL" },
-  { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^ ^c#88c0d0^ ^c#d08770^%I:%M%p "},
+  { separator, "  ", "NULL" },
+  { run_command, "%4s", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+  /* { separator, " ", "NULL" }, */
+  { separator, "   ", "NULL" },
+  { cpu_perc, " %s%%", "NULL"},
+  /* { separator, " ", "NULL" }, */
+  { separator, "   ", "NULL" },
+  { ram_perc, " %s%%", "NULL"},
+  /* { separator, "| ", "NULL" }, */
+  { separator, "   ", "NULL" },
+  { run_command, "%s", "sb-kernel"},
+  /* { separator, "| ", "NULL" }, */
+  { separator, "  ", "NULL" },
+  { run_command, "%4s", "sb-pacupdate" },
+  /* { separator, "| ", "NULL" }, */
+  { separator, "   ", "NULL" },
+  { datetime, "%s", "%a, %b %d   %I:%M%p "},
+
+  /* With Status2d */
+
+  /* { separator, "^c#88c0d0^  ", "NULL" }, */
+  /* { run_command, "^c#d08770^%4s ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" }, */
+  /* { separator, "^c#bbbbbb^ ", "NULL" }, */
+  /* { separator, "^c#88c0d0^ ", "NULL" }, */
+  /* { cpu_perc, "^c#d08770^ %s%% ", "NULL"}, */
+  /* { separator, "^c#bbbbbb^ ", "NULL" }, */
+  /* { separator, "^c#88c0d0^ ", "NULL" }, */
+  /* { ram_perc, "^c#d08770^ %s%% ", "NULL"}, */
+  /* { separator, "^c#bbbbbb^ ", "NULL" }, */
+  /* { separator, "^c#88c0d0^ ", "NULL" }, */
+  /* { kernel_release, "^c#d08770^%s ", "NULL"}, */
+  /* { separator, "^c#bbbbbb^ ", "NULL" }, */
+  /* { separator, "^c#88c0d0^ ", "NULL" }, */
+  /* { run_command, "^c#d08770^%4s", "sb-pacupdate" }, */
+  /* { separator, "^c#bbbbbb^ ", "NULL" }, */
+  /* { separator, "^c#88c0d0^ ", "NULL" }, */
+  /* { datetime, "%s", "^c#d08770^%a, %b %d ^c#bbbbbb^ ^c#88c0d0^ ^c#d08770^%I:%M %p "}, */
 
   /* laptop clean */
   /* { separator, "^c#88c0d0^  ", "NULL" }, */
